@@ -14,10 +14,12 @@ const BillOptions = () => {
   return (
     <Container>
       <CustomInput name='bill' text='Bill' icon={IconDollar} />
-      <Label>Select Tip %</Label>
-      <TipsContainer>
-        {tips.map((tip, i) => <Tip value={tip} key={i} />)}
-      </TipsContainer>
+      <div>
+        <Label>Select Tip %</Label>
+        <TipsContainer>
+          {tips.map((tip, i) => <Tip value={tip} key={i} />)}
+        </TipsContainer>
+      </div>
       <CustomInput name='numberOfPeople' text='Number of People' icon={IconPerson} />
     </Container>
   )

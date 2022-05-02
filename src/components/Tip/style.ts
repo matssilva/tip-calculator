@@ -9,7 +9,8 @@ export const TipElement = styled.div`
   border-radius: 4px;
   cursor: pointer;
   color: ${({ theme }) => theme.white};
-
+  padding: 5px;
+  
   &:hover {
     background-color: ${({ theme }) => theme.primaryColor};
     color: ${({ theme }) => theme.veryDarkGreen};
