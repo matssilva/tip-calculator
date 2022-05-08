@@ -13,5 +13,30 @@ export const TipsContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 15px;
   column-gap: 17px;
-  margin-top: 15px
+  margin-top: 15px;
 `
+
+export const InputTip = styled.input`
+  width: 100%;
+  border-radius: 4px;
+  text-align: right;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: ${({ theme }) => theme.veryLightGreen};
+  color: ${({ theme }) => theme.veryDarkGreen};
+  font-family: ${({ theme }) => theme.fontFamily};
+  padding: 5px;
+  ::-webkit-input-placeholder {
+   text-align: center;
+}
+  ::-webkit-inner-spin-button{
+        -webkit-appearance: none; 
+        margin: 0; 
+    }
+    ::-webkit-outer-spin-button{
+        -webkit-appearance: none; 
+        margin: 0; 
+    }    
+
+`;

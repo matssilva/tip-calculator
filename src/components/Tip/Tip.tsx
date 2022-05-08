@@ -2,12 +2,15 @@ import React from 'react'
 import { TipElement } from './style';
 
 interface Props {
-  value: number;
+  tip: number;
+  onTipClick: (value: number) => void;
+  isActive: boolean;
+  tipIsInput: boolean;
 }
 
-const Tip = ({ value }: Props) => {
+const Tip = ({ tip, onTipClick, isActive, tipIsInput }: Props) => {
   return (
-    <TipElement>{value}%</TipElement>
+    <TipElement onClick={() => onTipClick(tip)} isActive={isActive && !tipIsInput}>{tip}%</TipElement>
   )
 }
 

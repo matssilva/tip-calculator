@@ -1,7 +1,9 @@
 import React from 'react'
 import { Container, TextContainer, Result as ResultElement } from './style'
 
-const Result = () => {
+interface Props { tipsPerPerson: number, totalPerPerson: number, onReset: () => void };
+
+const Result = ({ tipsPerPerson, totalPerPerson, onReset }: Props): JSX.Element => {
   return (
     <Container>
       <div>
@@ -9,17 +11,17 @@ const Result = () => {
           <p className='mainText'>Tip Amount</p>
           <p className='secondaryText'>/ person</p>
         </TextContainer>
-        <ResultElement>$0.00</ResultElement>
+        <ResultElement>${tipsPerPerson.toFixed(2)}</ResultElement>
       </div>
       <div>
         <TextContainer>
           <p className='mainText'>Total</p>
           <p className='secondaryText'>/ person</p>
         </TextContainer>
-        <ResultElement>$0.00</ResultElement>
+        <ResultElement>${totalPerPerson.toFixed(2)}</ResultElement>
       </div>
-      <button>RESET</button>
-    </Container>
+      <button onClick={onReset}>RESET</button>
+    </Container >
   )
 }
 
