@@ -6,6 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 15px;
   justify-content: space-between;
+
+  @media(max-width: 694px) {
+    width: 100%;
+  }
 `
 
 export const TipsContainer = styled.div`
